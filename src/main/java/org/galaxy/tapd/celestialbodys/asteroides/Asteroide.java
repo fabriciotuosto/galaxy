@@ -5,88 +5,88 @@ import org.galaxy.tapd.celestialbodys.CuerpoCeleste;
 import org.galaxy.tapd.visitors.CuerpoCelesteVisitor;
 import org.galaxy.tapd.visitors.Visitable;
 
-public class Asteroide extends CuerpoCeleste implements Visitable{
-	
-	public Asteroide(Componente padre) {
-		super(padre);
-		if (padre == null)
-		{
-			throw new IllegalStateException("El Padre no puede ser null");
-		}
-		parent = padre;
-	}
+public class Asteroide extends CuerpoCeleste implements Visitable {
 
-	private Float diametro;
-	private Integer distanciaTierra;
-	private Float porcentajeMetalesUtiles;
-	private Float porcentajeElementosRadiactivos;
-	private Integer periodoOrbital;
-	private Float porcentajeDeuterio;
-	private Float porcentajeAguaSolida;
-	private Componente parent;
-	
-	public void accept(CuerpoCelesteVisitor visitor) {
-		visitor.visitAsteroide(this);
-	}
+    public Asteroide(Componente padre) {
+        super(padre);
+        if (padre == null) {
+            throw new IllegalStateException("El Padre no puede ser null");
+        }
+        parent = padre;
+    }
+    private Float diametro;
+    private Integer distanciaTierra;
+    private Float porcentajeMetalesUtiles;
+    private Float porcentajeElementosRadiactivos;
+    private Integer periodoOrbital;
+    private Float porcentajeDeuterio;
+    private Float porcentajeAguaSolida;
+    private Componente parent;
 
-	public Componente getParent() {
-		return parent;
-	}
+    @Override
+    public void accept(CuerpoCelesteVisitor visitor) {
+        visitor.visitAsteroide(this);
+    }
 
-	public Float getDiametro() {
-		return diametro;
-	}
+    @Override
+    public Componente getParent() {
+        return parent;
+    }
 
-	public void setDiametro(Float diametro) {
-		this.diametro = diametro;
-	}
+    public Float getDiametro() {
+        return diametro;
+    }
 
-	public Integer getDistanciaTierra() {
-		return distanciaTierra;
-	}
+    public void setDiametro(Float diametro) {
+        this.diametro = diametro;
+    }
 
-	public void setDistanciaTierra(Integer distanciaTierra) {
-		this.distanciaTierra = distanciaTierra;
-	}
+    public Integer getDistanciaTierra() {
+        return distanciaTierra;
+    }
 
-	public Integer getPeriodoOrbital() {
-		return periodoOrbital;
-	}
+    public void setDistanciaTierra(Integer distanciaTierra) {
+        this.distanciaTierra = distanciaTierra;
+    }
 
-	public void setPeriodoOrbital(Integer periodoOrbital) {
-		this.periodoOrbital = periodoOrbital;
-	}
+    public Integer getPeriodoOrbital() {
+        return periodoOrbital;
+    }
 
-	public Float getPorcentajeAguaSolida() {
-		return porcentajeAguaSolida;
-	}
+    public void setPeriodoOrbital(Integer periodoOrbital) {
+        this.periodoOrbital = periodoOrbital;
+    }
 
-	public void setPorcentajeAguaSolida(Float porcentajeAguaSolida) {
-		this.porcentajeAguaSolida = porcentajeAguaSolida;
-	}
+    public Float getPorcentajeAguaSolida() {
+        return porcentajeAguaSolida;
+    }
 
-	public Float getPorcentajeDeuterio() {
-		return porcentajeDeuterio;
-	}
+    public void setPorcentajeAguaSolida(Float porcentajeAguaSolida) {
+        this.porcentajeAguaSolida = porcentajeAguaSolida;
+    }
 
-	public void setPorcentajeDeuterio(Float porcentajeDeuterio) {
-		this.porcentajeDeuterio = porcentajeDeuterio;
-	}
+    public Float getPorcentajeDeuterio() {
+        return porcentajeDeuterio;
+    }
 
-	public Float getPorcentajeElementosRadiactivos() {
-		return porcentajeElementosRadiactivos;
-	}
+    public void setPorcentajeDeuterio(Float porcentajeDeuterio) {
+        this.porcentajeDeuterio = porcentajeDeuterio;
+    }
 
-	public void setPorcentajeElementosRadiactivos(
-			Float porcentajeElementosRadiactivos) {
-		this.porcentajeElementosRadiactivos = porcentajeElementosRadiactivos;
-	}
+    public Float getPorcentajeElementosRadiactivos() {
+        return porcentajeElementosRadiactivos;
+    }
 
-	public Float getPorcentajeMetalesUtiles() {
-		return porcentajeMetalesUtiles;
-	}
+    public void setPorcentajeElementosRadiactivos(
+            Float porcentajeElementosRadiactivos) {
+        this.porcentajeElementosRadiactivos = porcentajeElementosRadiactivos;
+    }
 
-	public void setPorcentajeMetalesUtiles(Float porcentajeMetalesUtiles) {
-		this.porcentajeMetalesUtiles = porcentajeMetalesUtiles;
-	}
+    public Float getPorcentajeMetalesUtiles() {
+        return porcentajeMetalesUtiles;
+    }
+
+    public void setPorcentajeMetalesUtiles(Float porcentajeMetalesUtiles) {
+        this.porcentajeMetalesUtiles = porcentajeMetalesUtiles;
+    }
 }
